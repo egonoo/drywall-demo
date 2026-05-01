@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+.invoice-shell {
+  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+}
+
+@media print {
+  body {
+    background: white;
+  }
+
+  aside,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  main {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .invoice-shell {
+    background: white;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .invoice-paper {
+    max-width: 100%;
+    margin: 0;
+    padding: 24px;
+  }
+}
