@@ -7,7 +7,12 @@ body {
 }
 
 .invoice-shell {
-  background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+  background: linear-gradient(180deg, #fff7ed 0%, #e2e8f0 100%);
+}
+
+@page {
+  size: 8.5in 11in;
+  margin: 0.35in;
 }
 
 @media print {
@@ -32,8 +37,11 @@ body {
   }
 
   .invoice-paper {
-    max-width: 100%;
-    margin: 0;
-    padding: 24px;
+    width: 7.8in;
+    min-height: 10.3in;
+    margin: 0 auto;
+    padding: 0.2in;
+    box-shadow: none;
+    page-break-inside: avoid;
   }
 }
